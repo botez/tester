@@ -19,6 +19,6 @@ ADD Makefile /tmp/Makefile
 #RUN mkdir -p /config/transcode
 #RUN mv /tmp/Makefile /config/transcode/
 
-RUN mkdir /etc/service/test
-ADD test.sh /etc/service/test/run
-RUN chmod +x /etc/service/test/run
+#RUN mkdir /etc/service/test
+#ADD test.sh /etc/service/test/run
+#RUN chmod +x /etc/service/test/run
