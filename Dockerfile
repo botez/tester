@@ -6,7 +6,6 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
 # Use baseimage-docker's init system
-CMD ["/sbin/my_init"]
 
 # Fix a Debianism of the nobody's uid being 65534
 RUN usermod -u 99 nobody
@@ -22,3 +21,5 @@ ADD Makefile /tmp/Makefile
 RUN mkdir /etc/service/test
 ADD test.sh /etc/service/test/run
 RUN chmod +x /etc/service/test/run
+
+CMD ["/sbin/my_init"]
