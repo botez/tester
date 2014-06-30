@@ -16,5 +16,5 @@ RUN usermod -g 100 nobody
 VOLUME /config
 
 ADD Makefile /tmp/Makefile
-RUN mkdir /config/transcode
+RUN mkdir -p /config/transcode
 RUN mv /tmp/Makefile /config/transcode/
