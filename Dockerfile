@@ -14,7 +14,7 @@ RUN usermod -g 100 nobody
 
 
 VOLUME /config
-# install 64-bit binaries for ffmpeg/lame/etc
-ADD http://madsonic.org/download/transcode/20140411_madsonic-transcode_latest_x64.zip /tmp/transcode.zip
-RUN unzip /tmp/transcode.zip -d /tmp
-RUN mv /tmp/linux/* /config
+
+ADD Makefile /tmp/Makefile
+RUN mkdir /config/transcode
+RUN mv /tmp/Makefile /config/transcode/
